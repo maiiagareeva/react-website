@@ -16,3 +16,6 @@ yarn-error.log*
 
 # build artifacts
 coverage/
+
+#local images
+public/images/*
