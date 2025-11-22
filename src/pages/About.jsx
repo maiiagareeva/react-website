@@ -12,7 +12,26 @@ export default function About(){
           <div>
             <p><strong>Hello!</strong> I'm a passionate developer and photographer who loves to create beautiful and functional experiences.</p>
             <p>I combine technical expertise with creative vision to build projects that are not only functional but also aesthetically pleasing.</p>
-            <p>I'm also a founder of my podcast <i>BeeInBoots Broadcasts</i> available on Apple Podcast and Soundcloud platforms.</p>
+            <p>I'm also a founder of my podcast <i>BeeInBoots Broadcasts</i> available on {' '}
+            <a 
+              href="https://apple.co/4awk7hb" 
+              target="_blank" 
+              rel="noreferrer"
+              className="about-link"
+            >
+              Apple Podcasts
+            </a>{' '}
+            and{' '}
+            <a 
+              href="https://soundcloud.com/beeinboots" 
+              target="_blank" 
+              rel="noreferrer"
+              className="about-link"
+            >
+              SoundCloud
+            </a>{' '}
+            platforms.
+            </p>
             <h3>What I Do</h3>
             <ul className="skills">
               <li><strong>Web Development</strong><span>HTML, CSS, JavaScript, React, Django</span></li>
