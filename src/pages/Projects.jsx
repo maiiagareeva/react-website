@@ -9,7 +9,7 @@ export default function Projects() {
     {
       title: "Map API",
       desc: "Integration of Google Map interface into the Gopher Eye App.",
-      img: "public/projects_img/map.png",
+      img: "/projects_img/map.png",
       skills: ["Dart", "HTML", "Flutter", "Google Maps", "Figma"],
       duration: "March–April 2025",
       link: "https://github.com/AgRobotics-Lab-in-BBE-UMN/gopher-eye-app.git",
@@ -26,7 +26,7 @@ export default function Projects() {
     {
       title: "LLM",
       desc: "LLM integration to the application of detecting leaves diseases.",
-      img: "public/projects_img/llm.png",
+      img: "/projects_img/llm.png",
       skills: ["Python", "OpenAI API", "Flask", "MSI server", "LoRA Adapter run"],
       duration: "September-November 2025",
       link: "https://github.com/maiiagareeva/image-cli-bot.git",
@@ -36,7 +36,7 @@ export default function Projects() {
     {
       title: "Portfolio",
       desc: "Creating Website - Portfolio using Figma, React, JS and HTML.",
-      img: "public/projects_img/main.JPG",
+      img: "/projects_img/main.JPG",
       skills: ["React", "Figma", "CSS", "HTML"],
       duration: "November 2024",
       link: "https://github.com/maiiagareeva/React_website.git",
@@ -56,7 +56,7 @@ export default function Projects() {
     {
       title: "Pictured Rocks National Lakeshore",
       desc: "Co-organized a 3-day backpacking for a group of people.",
-      img: "public/projects_img/PRNL.jpg",
+      img: "/projects_img/PRNL.jpg",
       skills: ["Planning", "Leadership", "Navigation", "MySQL Workbench"],
       duration: "September 2025",
       // link: "#",
@@ -79,7 +79,7 @@ export default function Projects() {
     {
       title: "GEE",
       desc: "Working with GEE API.",
-      img: "public/projects_img/gee.png",
+      img: "/projects_img/gee.png",
       skills: ["Python","JavaScript", "Google Earth Engine", "Google Cloud SQL Studio"],
       duration: "December 2025",
       link: "https://github.com/alexxxroz/total-forest.git",
@@ -97,7 +97,7 @@ export default function Projects() {
     {
       title: "High School Photoset",
       desc: "Made a personal requested photoset for a girl.",
-      img: "public/projects_img/photoset.jpg",
+      img: "/projects_img/photoset.jpg",
       skills: ["Photography", "Portraits", "Canon Rebel DSLR"],
       duration: "May 2025",
       longDesc: `
