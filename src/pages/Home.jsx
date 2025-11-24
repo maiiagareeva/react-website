@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 export default function Home(){
   return (
@@ -15,7 +16,7 @@ export default function Home(){
               the glance of code and photography lens.
             </p>
             <div className="buttons">
-              <a className="btn" href="/projects">View projects →</a>
+              <Link className="btn" to="/projects">View projects →</Link>
               <a className="btn download-btn" href="static/MG_CV_current.pdf" target="_blank" rel="noopener noreferrer">View CV →</a>
             </div>
             <div className="links">
