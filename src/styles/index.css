@@ -86,7 +86,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(1vw, 2vw, 3vw);
-  border: 0.15vw solid var(--border);
+  border: 0.05vw solid var(--border);
   border-radius: 0.6vw;
   padding: clamp(0.4rem, 0.8vw, 1rem) clamp(0.8rem, 2vw, 1.5rem);
   align-items: center;
@@ -341,7 +341,8 @@ a {
 }
 
 .about-grid p {
-  font-size: clamp(0.3rem, 1vw, 1rem);
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  margin-bottom: 2vh;
 }
 
 .about-grid p:first-of-type {
@@ -536,7 +537,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(1vw, 2vw, 3vw);
-  border: 0.15vw solid var(--border);
+  border: 0.05vw solid var(--border);
   border-radius: 0.6vw;
   padding: clamp(0.4rem, 0.8vw, 1rem) clamp(0.8rem, 2vw, 1.5rem);
   align-items: center;
@@ -562,6 +563,9 @@ a {
   .navbar-inner {
     justify-content: flex-end;
     padding-right: 3vw;
+  }
+  .about-grid {
+    max-width: 100%;
   }
 
   .hero {
@@ -629,7 +633,7 @@ a {
     flex-direction: column;
     align-items: stretch;
     background: var(--panel);
-    border: 0.15vw solid var(--border);
+    border: 0.05vw solid var(--border);
     border-radius: 0.6vw;
     padding: 0.6rem 1rem;
     opacity: 0;
