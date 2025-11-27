@@ -78,6 +78,10 @@ a {
   background: var(--accent);
 }
 
+.brand span {
+  font-family:"Courier New", ui-monospace, monospace;
+}
+
 .top-menu{
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +97,11 @@ a {
 }
 .top-menu a.active{
   font-weight: 700;
+  color: var(--accent);
+}
+
+.top-menu a:hover {
+  color: var(--accent);
 }
 
 .hero{
@@ -150,12 +159,10 @@ a {
   display:flex; 
   gap: 2rem;
   padding-top: 2rem;
-  
 }
 
 .hero-right {
-  /* width: 100%; */
-  max-width: 60%;
+  width: 100%;
   border-radius: 1vw;
   overflow: hidden;
   box-shadow: 0 0.8vw 2vw rgba(0, 0, 0, 0.25);
@@ -168,17 +175,6 @@ a {
   object-position: center;
   display: block;
   border-radius: 1vw;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-right {
-    max-width: 60%;
-  }
 }
 
 .section{
@@ -245,26 +241,6 @@ a {
   transform: translateX(-50%) translateY(-0.4vw);
 }
 
-/* podcast */
-
-.podcast-links {
-  display: flex;
-  gap: clamp(2vw, 3vw, 4vw);
-  padding: clamp(1rem, 2vw, 2rem);
-}
-
-.podcast-item img {
-  width: clamp(1.4rem, 3vw, 2rem);
-  height: clamp(1.4rem, 3vw, 2rem);
-}
-
-.menu-wrapper {
-  display: flex;
-  align-items: center;
-  gap: clamp(2vw, 3vw, 4vw);
-}
-
-/* /podcast  */
 
 
 .cards{
@@ -416,7 +392,27 @@ a {
   font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2vw, 3vw, 4vw);
+}
 
+/* podcast */
+
+.podcast-links {
+  display: flex;
+  gap: clamp(2vw, 3vw, 4vw);
+  /* padding: clamp(1rem, 2vw, 2rem); */
+}
+
+.podcast-item img {
+  width: clamp(1.4rem, 3vw, 2rem);
+  height: clamp(1.4rem, 3vw, 2rem);
+}
+
+/* /podcast  */
 
 .photo-grid{
   display: grid;
@@ -500,15 +496,78 @@ a {
   line-height: 2;
 }
 
-@media (max-width: 768px) {
-  .photo-grid {
-    grid-template-columns: repeat(auto-fit, minmax(clamp(35vw, 45vw, 60vw), 1fr));
-    gap: 3vw;
+.burger-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.burger-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--panel);
+  border: 0.15vw solid var(--border);
+  border-radius: 0.6vw;
+  padding: 0.6rem 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+.burger-menu.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(1rem);
+}
+
+
+.top-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1vw, 2vw, 3vw);
+  border: 0.15vw solid var(--border);
+  border-radius: 0.6vw;
+  padding: clamp(0.4rem, 0.8vw, 1rem) clamp(0.8rem, 2vw, 1.5rem);
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Default (desktop ≥1024px)       */
+.desktop-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.burger-area {
+  display: none;
+}
+
+/* TABLET (≤800px) prev 1023                */
+@media (max-width: 800px) {
+
+  .navbar-inner {
+    justify-content: flex-end;
+    padding-right: 3vw;
   }
 
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 3vw;
   }
 
   .hero-left {
@@ -516,28 +575,147 @@ a {
   }
 
   .hero-right {
-    max-width: 100%;
-    height: auto;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    gap: 3vw;
   }
 
   .top-menu {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none !important;
   }
 
-  .navbar-inner {
+  .brand-text {
+    display: none; /* hide “BeeInBoots” text */
+  }
+
+  .burger-area {
+    display: flex;
+    position: relative;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5vw;
+    align-items: flex-end;
+    padding-bottom: 0.4rem;
+  }
+
+  .burger-area::after {
+    content: "";
+    position: absolute;
+    /* right: -1rem; */
+    top: 0;
+    width: 3rem;
+    height: 4rem;
+    background: transparent;
+    /* pointer-events: auto; */
+  }
+
+  .burger-area img {
+    width: clamp(2.5rem, 6vw, 3.5rem);
+    height: clamp(2.5rem, 6vw, 3.5rem);
+    border-radius: 0.5vw;
+    object-fit: cover;
+    background: var(--accent);
+    cursor: pointer;
+  }
+
+  .burger-menu {
+    position: absolute;
+    top: calc(100% + 0.2rem);
+    right: 0;
+    /* transform: translateY(0.5rem); */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--panel);
+    border: 0.15vw solid var(--border);
+    border-radius: 0.6vw;
+    padding: 0.6rem 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 25;
+    min-width: max-content;
+  }
+
+  .burger-area:hover .burger-menu,
+  .burger-menu:hover,
+  .burger-area:has(.burger-menu:hover) .burger-menu {
+    opacity: 1;
+    visibility: visible;
+    /* transform: translateY(1rem); */
+    /* pointer-events: auto; */
+  }
+
+  .burger-menu a {
+    text-align: right;
+    font-family: "Courier New", ui-monospace, monospace;
+    font-weight: 400;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: clamp(0.5rem, 1.5vw, 0.9rem);
+    line-height: 1.2;
+    margin: 0.1rem 0;
+    padding: 0.1rem 0;
+  }
+
+  .burger-menu a.active {
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .burger-menu a:hover {
+    color: var(--accent);
   }
 
   .podcast-links {
     justify-content: center;
   }
 
-  .top-menu {
+  .desktop-navbar {
+    display: none;
+  }
+
+  .buttons {
     justify-content: center;
-    margin-top: 1vh;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+}
+
+/* MOBILE (≤640px) */
+@media (max-width: 640px) {
+
+  body {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+
+  .navbar-inner {
+    gap: 0.5rem;
+    padding-right: 2rem;
+  }
+
+  .hero-right {
+    max-width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
+    gap: 4vw;
+  }
+
+  .burger-menu {
+    font-size: 1rem;
+    right: 0;
   }
 }

@@ -26,7 +26,7 @@ export default function Home(){
 
           </div>
           <div className="hero-right">
-            <img src="/images/me.JPG" alt="BeeInBoots logo" />
+            <img src="/images/portray.jpg" alt="BeeInBoots logo" />
           </div>
         </section>
       </main>

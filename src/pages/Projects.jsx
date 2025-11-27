@@ -7,6 +7,26 @@ export default function Projects() {
 
   const items = [
     {
+      title: "Portfolio",
+      desc: "Creating Website - Portfolio using Figma, React, JS and HTML.",
+      img: "/projects_img/main.JPG",
+      skills: ["React", "Figma", "CSS", "HTML"],
+      duration: "November 2024",
+      link: "https://github.com/maiiagareeva/React_website.git",
+      longDesc: `
+      The website you're using right now is my independent project. Throught it's creation 
+      I tried milions of diffent designs, interfaces and inner components.\n
+      Ultimately, I designed and built my personal portfolio website from scratch.
+      This project started with creating the layout and visual style in Figma, 
+      then bringing those ideas to life using React, JavaScript, and CSS. 
+      I wanted the website being functional and easy to get valuable information quickly. 
+      The website is meant to showcase my projects, photography, and a bit about 
+      who I am as a data science student.\n 
+      Along the way, I learned how to structure a React app.
+      Overall, this project helped me improve my front-end skills, wrap everything I am, I have and 
+      gave me a space I can continue to grow and update over time.`,
+    },
+    {
       title: "Map API",
       desc: "Integration of Google Map interface into the Gopher Eye App.",
       img: "/projects_img/map.png",
@@ -31,27 +51,15 @@ export default function Projects() {
       duration: "September-November 2025",
       link: "https://github.com/maiiagareeva/image-cli-bot.git",
       longDesc: `
-      Chat bot`,
-    },
-    {
-      title: "Portfolio",
-      desc: "Creating Website - Portfolio using Figma, React, JS and HTML.",
-      img: "/projects_img/main.JPG",
-      skills: ["React", "Figma", "CSS", "HTML"],
-      duration: "November 2024",
-      link: "https://github.com/maiiagareeva/React_website.git",
-      longDesc: `
-      The website you're using right now is my independent project. Throught it's creation 
-      I tried milions of diffent designs, interfaces and inner components.\n
-      Ultimately, I designed and built my personal portfolio website from scratch.
-      This project started with creating the layout and visual style in Figma, 
-      then bringing those ideas to life using React, JavaScript, and CSS. 
-      I wanted the website being functional and easy to get valuable information quickly. 
-      The website is meant to showcase my projects, photography, and a bit about 
-      who I am as a data science student.\n 
-      Along the way, I learned how to structure a React app.
-      Overall, this project helped me improve my front-end skills, wrap everything I am, I have and 
-      gave me a space I can continue to grow and update over time.`,
+      Gopher Eye App is a Flutter-based mobile application designed for detecting and 
+      analyzing leaves’ diseases, developed within the Agricultural Engineering Lab at the 
+      University of Minnesota. The project aimed to integrate Large Language Model (LLM) 
+      capabilities into the existing system to enhance user interaction and diagnostic insights.\n
+      As part of this work, we implemented a lightweight, locally hosted LLM (Qwen/Qwen3-1.7B) 
+      integrated into the Gopher Eye app via an in-context learning (ICL) pipeline. This setup enables 
+      natural prompt–image interaction for disease classification, improving interpretability and robustness 
+      of the predictions. The model was further optimized using a LoRA adapter to fine-tune visual–text 
+      embeddings through a CLIP framework, enabling efficient prompt–image transformations on limited hardware.`,
     },
     {
       title: "Pictured Rocks National Lakeshore",
