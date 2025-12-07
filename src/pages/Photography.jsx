@@ -1,7 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-const photoFiles = import.meta.glob('/public/images/photo*.jpg', { eager: true, import: 'default' });
-const photos = Object.keys(photoFiles).map((path) => path.replace('/public', ''));
+function getIndex(path) {
+  const match = path.match(/photo(\d+)\.jpg$/);
+  return match ? Number(match[1]) : 0;
+}
+
+
+const fullFiles = import.meta.glob('/public/images/full/photo*.jpg', { eager: true, import: 'default' });
+const thumbFiles = import.meta.glob('/public/images/thumbs/photo*.jpg', { eager: true, import: 'default' });
+
+let photosFull = Object.keys(fullFiles).map((p) => p.replace('/public', ''));
+let photosThumb = Object.keys(thumbFiles).map((p) => p.replace('/public', ''));
+
+photosFull.sort((a, b) => getIndex(a) - getIndex(b));
+photosThumb.sort((a, b) => getIndex(a) - getIndex(b));
+// last added in the beginning
+photosFull.reverse();
+photosThumb.reverse();
 
 const captions = [
   'Puring on the lake, before the hurricane, Onega Lake, Karelia, Russia. July 2025',
@@ -20,8 +35,11 @@ const captions = [
   "Lighthouse on the border with Canada, Grand Marais, North MN, United States. April 2025",
   "Kayaking on the lake, Lake Superior, MI, United States. September 2025",
   "Lakeshore, Lake Superior, MI, United States. September 2025",
-  "Missisipi river view from the Hustings Park, South MN, United States. October 2025"
+  "Missisipi river view from the Hustings Park, South MN, United States. October 2025",
+  "18. Captions currently under deploy","19. Captions currently under deploy","20. Captions currently under deploy","21. Captions currently under deploy","22. Captions currently under deploy","23. Captions currently under deploy","24. Captions currently under deploy","25. Captions currently under deploy","26. Captions currently under deploy","27. Captions currently under deploy","28. Captions currently under deploy","29. Captions currently under deploy","30. Captions currently under deploy","31. Captions currently under deploy","32. Captions currently under deploy","33. Captions currently under deploy","34. Captions currently under deploy","35. Captions currently under deploy","36. Captions currently under deploy","37. Captions currently under deploy","38. Captions currently under deploy","39. Captions currently under deploy"
 ];
+
+captions.reverse();
 
 
 
@@ -30,8 +48,8 @@ export default function Photography(){
   const [index,setIndex] = useState(0);
   const open = (i)=>{ setIndex(i); setOpen(true); };
   const close = ()=> setOpen(false);
-  const prev = ()=> setIndex(i=>(i-1+photos.length)%photos.length);
-  const next = ()=> setIndex(i=>(i+1)%photos.length);
+  const prev = ()=> setIndex(i=>(i-1+photosFull.length)%photosFull.length);
+  const next = ()=> setIndex(i=>(i+1)%photosFull.length);
   // keyboard
   useEffect(()=>{
     if(!isOpen) return;
@@ -61,7 +79,7 @@ export default function Photography(){
           </span>
         </h2>
         <div className="photo-grid">
-          {photos.map((src,i)=>(
+          {photosThumb.map((src,i)=>(
             <img className="photo" key={i} src={src} alt={`photo ${i+1}`} onClick={()=>open(i)} />
           ))}
         </div>
@@ -70,7 +88,7 @@ export default function Photography(){
       {isOpen && (
         <div className="lightbox" onClick={close}>
           <button className="lb-btn left" onClick={(e)=>{e.stopPropagation(); prev();}} aria-label="Previous">‹</button>
-          <img className="lb-image" src={photos[index]} alt="large" onClick={(e)=>e.stopPropagation()} />
+          <img className="lb-image" src={photosFull[index]} alt="large" onClick={(e)=>e.stopPropagation()} />
           <p className="lb-caption">{captions[index]}</p>
           <button className="lb-btn right" onClick={(e)=>{e.stopPropagation(); next();}} aria-label="Next">›</button>
           <button className="lb-close" onClick={(e)=>{e.stopPropagation(); close();}} aria-label="Close">×</button>
