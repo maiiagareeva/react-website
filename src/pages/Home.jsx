@@ -18,8 +18,8 @@ export default function Home(){
               <a className="btn download-btn" href="static/MG_CV_current.pdf" target="_blank" rel="noopener noreferrer">View CV →</a>
             </div>
             <div className="links">
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn →</a>
+              <a href="https://github.com" target="_blank" rel="noreferrer">GitHub →</a>
             </div>
 
           </div>
