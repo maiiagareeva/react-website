@@ -10,7 +10,7 @@ export default function Home(){
           <div className="hero-left">
             <h1>MAIIA<br/>GAREEVA</h1>
             <p>
-              A <u>data science</u> student curious about the world through
+              A <u>data science and statistics</u> student curious about the world through
               the glance of code and photography lens.
             </p>
             <div className="buttons">
