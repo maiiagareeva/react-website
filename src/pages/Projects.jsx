@@ -70,7 +70,7 @@ export default function Projects() {
       of the predictions. The model is further optimized using a LoRA adapter to fine-tune visual–text 
       embeddings through a CLIP framework, enabling efficient prompt–image transformations on limited hardware.\n
       It is the currect project on the stage of "Metrics BLEU, ROUGE, BARTScore research pursuing better and better descriptions guaranteeing results accuracy.\n 
-      University of Minnesota Twin Cities. Agriculure Robotics Lab Team CS, Ass. Prof. Ce Yang. Research Assistant Nicholas Padilla. Udegraduate student, teammate Chang Shen.`,
+      University of Minnesota Twin Cities. Agriculure Robotics Lab Team CS, Ass. Prof. Ce Yang. Research Assistant Nicholas Padilla. Undergraduate student, teammate Chang Shen.`,
     },
     {
       title: "Pictured Rocks National Lakeshore",
