@@ -58,7 +58,20 @@ const captions = [
   "Campground, Superior Hiking Trail, MN, United States, May 2025",
   "Jet Boil setup on the campground, contemporary camping cooking, Superior Hiking Trail, MN, United States, May 2025",
   "Random New York Street, cars on the front line, Manheton, New York, NY, United States, December 2024",
-  "New York scyscrapers through the narrow dim-witted old streets, car illusion, Manheton, New York, NY, United States, December 2024"
+  "New York scyscrapers through the narrow dim-witted old streets, car illusion, Manheton, New York, NY, United States, December 2024",
+
+  "Moscow Rain day, Leniskiy Prospect, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
+  "Moscow Rain day, August 2026",
 ];
 
 captions.reverse();
